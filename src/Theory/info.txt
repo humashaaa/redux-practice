@@ -1,0 +1,37 @@
+------------------REDUX BASIC----------------------
+
+1. why using redux?
+=> state manage, prop uplifting/context API use na korei state data manage kora, scalable kora, state centrally manage kora so that code clean thake
+
+2. how redux works?
+=> component tree structure e state manage kore na separate store e state/data store kore rakhe
+and je component e state manage ba ei store er proyojon tara store e subscribe kore rakhbe
+like newsletter subscription. central store is redux
+
+3. what is redux?
+=> state container, for js , manage state separately, works both frontend & backend
+
+when there is an event(client do something like button click, scroll)
+there will be action in the redux store
+kono event howake bole dispatch
+kono ekta kaaj hobe -> function
+
+redux e dispatch hole reducer function e kaaj hoy
+
+
+---------- REDUCER FUNCTION----------
+
+reducer( state, action){
+
+    if(action){
+        change state 
+    }
+
+    return newState; (main state change kore na, return new updated state)
+}
+
+state updated hole subscribed componentgulo ke inform kore
+
+
+
+
