@@ -9,6 +9,7 @@ const Home = () => {
                 <Component1></Component1>
                 <Component2></Component2>
 
+
                 {/* total */}
                 <div className="space-x-3 bg-slate-200 shadow-lg p-16 mt-10 w-96 h-36 mx-auto">
                <p className="text-center font-bold"> TOTAL : </p>
