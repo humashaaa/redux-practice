@@ -17,7 +17,7 @@ const Home = () => {
   const [counters, setCounters] = useState(initialCounters);
 
   // increment
-  const handleIncrement = ({ id }) => {
+  const handleIncrement = (id) => {
     const updatedCounters = counters.map((counter) => {
       if (counter.id === id) {
         return { ...counter, value: counter.value + 1 };
@@ -30,7 +30,7 @@ const Home = () => {
   };
 
   //   decrement
-  const handleDecrement = ({ id }) => {
+  const handleDecrement = (id) => {
     const updatedCounters = counters.map((counter) => {
       if (counter.id === id) {
         return { ...counter, value: Math.max(0, counter.value - 1) };
@@ -42,6 +42,9 @@ const Home = () => {
 
     setCounters(updatedCounters);
   };
+
+//   total count
+const totalCount = counters.reduce((prev, current) => prev + current.value, 0 )
 
   return (
     <div>
@@ -57,7 +60,7 @@ const Home = () => {
         ))}
 
         {/* total */}
-        <TotalCount />
+        <TotalCount totalCount={totalCount} />
       </div>
     </div>
   );
